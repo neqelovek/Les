@@ -20,10 +20,25 @@
 
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-N = int(input("введите число N, чтобы узнать набор произведений от 1 до N "))
-for i in range(1,N+1):
-    factorial = 1
-    for i in range(2, i+1):
-        factorial *=i
+# N = int(input("введите число N, чтобы узнать набор произведений от 1 до N "))
+# for i in range(1,N+1):
+#     factorial = 1
+#     for i in range(2, i+1):
+#         factorial *=i
  
-    print(factorial)
+#     print(factorial)
+
+# Task 3
+
+# Напишите программу, в которой пользователь будет задавать две строки,
+#  а программа - определять количество вхождений одной строки в другой.
+#   Нельзя юзать find или count.
+
+counter = 0
+str1 = str.split(input('Введите первую строку '))
+words = str.split(input('Введите слова для поиска в первой строке '))
+for i in range(len(str1)):
+    for j in range(len(words)):
+        if str1[i] in words[j]:
+            counter+=1    
+print("Количество вхождение " + str(counter))
