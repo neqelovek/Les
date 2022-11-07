@@ -7,12 +7,12 @@
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
 
-# list = [2, 3, 5, 9, 3, 2, 4, 2, 1.2, 4.3]
-# list2 = []
-# for i in range(len(list)):
-#     if i % 2 !=0:
-#         list2.append(list[i])
-# print(sum(list2))
+list = [2, 3, 5, 9, 3, 2, 4, 2, 1.2, 4.3]
+list2 = []
+for i in range(len(list)):
+    if i % 2 !=0:
+        list2.append(list[i])
+print(sum(list2))
 
 
 # Задача 2.
@@ -25,19 +25,19 @@
 # - [2, 3, 5, 6] => [12, 15]
 
 
-# def sum_numbers(num, resoult):
-#     if num[0] != num[-1]:
-#         for i in num:
-#             delete_numbers = num[0] * num[-1]
-#             num.pop(0)
-#             num.pop(-1)
-#             resoult.append(delete_numbers)
-#     else: num[0] == num[-1]
-#     delete_numbers = num[0] * num[-1]       
-#     resoult.append(delete_numbers)
-#     print(resoult)
+def sum_numbers(num, resoult):
+    if num[0] != num[-1]:
+        for i in num:
+            delete_numbers = num[0] * num[-1]
+            num.pop(0)
+            num.pop(-1)
+            resoult.append(delete_numbers)
+    else: num[0] == num[-1]
+    delete_numbers = num[0] * num[-1]       
+    resoult.append(delete_numbers)
+    print(resoult)
 
-# sum_numbers([2, 3, 4, 5, 6], [])
+sum_numbers([2, 3, 4, 5, 6], [])
 
 
 # Задача 3. Задайте список из вещественных чисел.
@@ -77,14 +77,14 @@ diserence_numbers([1.1, 1.2, 3.1, 5, 10.01])
 # - 3 -> 11
 # - 2 -> 10
 
-# def decimal_in_binary (number):
+def decimal_in_binary (number):
 
-#     resoult = 0
-#     num = 1
-#     while number > 0:
-#         resoult = resoult + number % 2 * num
-#         num = num * 10
-#         number = number // 2
-#     print(resoult)
+    resoult = 0
+    num = 1
+    while number > 0:
+        resoult = resoult + number % 2 * num
+        num = num * 10
+        number = number // 2
+    print(resoult)
 
-# decimal_in_binary(45)
+decimal_in_binary(45)
